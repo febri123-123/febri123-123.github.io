@@ -3,94 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Febri | NOC Engineer Profile</title>
+    <title>Portfolio | Febri - NOC Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0d0d0d;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        /* Header & Navigasi */
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 10%;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; text-transform: uppercase; }
+
+        /* Hero Section (Bagian Biru) */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 91, 187, 0.8), rgba(0, 91, 187, 0.8)), 
+                        url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            background-color: #005bbb;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
         }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; font-weight: 300; opacity: 0.9; }
+        .btn-exp {
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-exp:hover { background: #333; }
 
-        .terminal {
-            width: 80%;
-            max-width: 800px;
+        /* About Me Section */
+        .about {
+            padding: 80px 10%;
             background: #1a1a1a;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
-            border: 1px solid #333;
+            color: white;
+            text-align: center;
         }
-
-        .header {
-            border-bottom: 1px solid #333;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            color: #888;
-            font-size: 0.9em;
+        .about h2 { font-size: 2rem; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+        .about h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #005bbb;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
+        .about p { max-width: 800px; margin: 0 auto; line-height: 1.8; color: #ccc; }
 
-        .command { color: #ff00ff; }
-        .keyword { color: #00ffff; }
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background: #00ff00;
-            animation: blink 1s infinite;
-            vertical-align: middle;
+        /* Certificate / Skills Section */
+        .skills {
+            padding: 60px 10%;
+            background: #111;
+            color: white;
+            text-align: center;
         }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+        .skill-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
         }
-
-        ul { list-style: none; padding-left: 0; }
-        li::before { content: "> "; color: #00ffff; }
-        
-        a { color: #00ff00; text-decoration: none; border-bottom: 1px dashed #00ff00; }
-        a:hover { background: #00ff00; color: #000; }
+        .tag {
+            background: #333;
+            padding: 8px 15px;
+            font-size: 12px;
+            border-radius: 4px;
+            border-bottom: 2px solid #005bbb;
+        }
     </style>
 </head>
 <body>
 
-<div class="terminal">
-    <div class="header">
-        root@febri-macbook:~# uptime: 4 years night-shift
-    </div>
-    
-    <div>
-        <span class="command">whoami</span>
-        <p><strong>Febri</strong><br>
-        Seorang <span class="keyword">NOC Engineer</span> yang fokus pada infrastruktur jaringan, monitoring trafik, dan optimasi sistem Linux.</p>
-    </div>
+    <header>
+        <div class="logo"><strong>FEBRI</strong></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Experience</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-    <div>
-        <span class="command">ls --skills</span>
-        <ul>
-            <li>Network Administration (Cisco, GNS3, Mikrotik)</li>
-            <li>Linux Server Management (Ubuntu 24.04, Samba, SFTP)</li>
-            <li>Version Control (Git & GitHub)</li>
-            <li>Hardware Optimization (Apple Retrocomputing)</li>
-        </ul>
-    </div>
+    <section class="hero">
+        <h1>HEY, MY NAME IS FEBRI</h1>
+        <p>Experienced Network Operations Center (NOC) professional with 4 years of expertise in infrastructure monitoring, troubleshooting, and Linux system 
+optimization.</p>
+        <a href="#about" class="btn-exp">Experience</a>
+    </section>
 
-    <div>
-        <span class="command">cat contact.txt</span>
-        <p>Email: <a href="mailto:email-mas@example.com">email-mas@example.com</a><br>
-        GitHub: <a href="https://github.com/febri123-123">github.com/febri123-123</a></p>
-    </div>
+    <section id="about" class="about">
+        <h2>ABOUT ME</h2>
+        <p>Saya adalah seorang IT professional yang terbiasa bekerja di bawah tekanan (night shift environment). Fokus utama saya adalah memastikan network uptime maksimal, 
+troubleshooting hardware (terutama Apple & PC), serta administrasi server berbasis Ubuntu.</p>
+    </section>
 
-    <div style="margin-top: 20px;">
-        <span class="command">./monitoring_status.sh</span>
-        <p style="color: #ffff00;">[STATUS: SYSTEM ONLINE] <span class="cursor"></span></p>
-    </div>
-</div>
+    <section id="skills" class="skills">
+        <h2>SKILLS & CERTIFICATION</h2>
+        <div class="skill-tags">
+            <div class="tag">Network Monitoring</div>
+            <div class="tag">Cisco Networking</div>
+            <div class="tag">Ubuntu Server 24.04</div>
+            <div class="tag">Git & GitHub Control</div>
+            <div class="tag">Samba & SFTP Config</div>
+            <div class="tag">Hardware Troubleshooting</div>
+        </div>
+    </section>
 
 </body>
 </html>
