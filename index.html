@@ -3,30 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil NOC Engineer</title>
+    <title>Febri | NOC Engineer Profile</title>
     <style>
-        body { font-family: 'Courier New', Courier, monospace; background-color: #1a1a1a; color: #00ff00; padding: 50px; }
-        .container { border: 1px solid #00ff00; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; }
-        h1 { border-bottom: 2px solid #00ff00; padding-bottom: 10px; }
-        .status { background-color: #333; padding: 5px 10px; border-radius: 5px; color: #fff; }
-        ul { list-style-type: "> "; }
+        body {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .terminal {
+            width: 80%;
+            max-width: 800px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+            border: 1px solid #333;
+        }
+
+        .header {
+            border-bottom: 1px solid #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .command { color: #ff00ff; }
+        .keyword { color: #00ffff; }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: #00ff00;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        ul { list-style: none; padding-left: 0; }
+        li::before { content: "> "; color: #00ffff; }
+        
+        a { color: #00ff00; text-decoration: none; border-bottom: 1px dashed #00ff00; }
+        a:hover { background: #00ff00; color: #000; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <p>Status: <span class="status">System Online</span></p>
-        <p>Saya adalah seorang <strong>NOC Engineer</strong> yang fokus pada infrastruktur jaringan dan optimasi sistem.</p>
-        
-        <h3>Keahlian & Minat:</h3>
-        <ul>
-            <li>Network Administration (Cisco & GNS3)</li>
-            <li>Linux Server Management (Ubuntu)</li>
-            <li>Version Control (Git & GitHub)</li>
-            <li>Hardware Optimization</li>
-        </ul>
 
-        <p><em>"Monitoring traffic, solving issues, and keeping the world connected."</em></p>
+<div class="terminal">
+    <div class="header">
+        root@febri-macbook:~# uptime: 4 years night-shift
     </div>
+    
+    <div>
+        <span class="command">whoami</span>
+        <p><strong>Febri</strong><br>
+        Seorang <span class="keyword">NOC Engineer</span> yang fokus pada infrastruktur jaringan, monitoring trafik, dan optimasi sistem Linux.</p>
+    </div>
+
+    <div>
+        <span class="command">ls --skills</span>
+        <ul>
+            <li>Network Administration (Cisco, GNS3, Mikrotik)</li>
+            <li>Linux Server Management (Ubuntu 24.04, Samba, SFTP)</li>
+            <li>Version Control (Git & GitHub)</li>
+            <li>Hardware Optimization (Apple Retrocomputing)</li>
+        </ul>
+    </div>
+
+    <div>
+        <span class="command">cat contact.txt</span>
+        <p>Email: <a href="mailto:email-mas@example.com">email-mas@example.com</a><br>
+        GitHub: <a href="https://github.com/febri123-123">github.com/febri123-123</a></p>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <span class="command">./monitoring_status.sh</span>
+        <p style="color: #ffff00;">[STATUS: SYSTEM ONLINE] <span class="cursor"></span></p>
+    </div>
+</div>
+
 </body>
 </html>
